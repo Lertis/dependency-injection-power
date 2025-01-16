@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { RouterModule, Routes } from '@angular/router'
 
-import { SelfFirstService, SelfMockFirstService } from './services'
+import { SelfFirstService, SelfMockAnotherFirstService } from './services'
 
 import { UsePropsContainerComponent } from './container/container.component'
 import { ParentComponent, ChildComponent, HostComponent, HostChildComponent } from './components'
@@ -40,7 +40,7 @@ const routes: Routes = [
   ],
   providers: [
     SelfFirstService,
-    { provide: SelfFirstService, useClass: SelfMockFirstService }
+    { provide: SelfFirstService, useClass: SelfMockAnotherFirstService }
   ]
 })
 export class TokenPropsModule { }

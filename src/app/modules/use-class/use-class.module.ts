@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { RouterModule, Routes } from '@angular/router'
+import { USE_CLASS_TOKEN } from '@models'
 
 import { FourthModule } from './fourth/fourth.module'
 import { FifthModule } from './fifth/fifth.module'
-import { SixthModule } from './sixth/sixth.module'
 import { BoxModule } from '../shared'
 
 import { UseClassContainerComponent } from './container/container.component'
+import { UseClassRootService } from './services'
 
 const routes: Routes = [
   {
@@ -22,7 +23,6 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     FourthModule,
     FifthModule,
-    SixthModule,
     BoxModule
   ],
   exports: [
@@ -30,6 +30,8 @@ const routes: Routes = [
     RouterModule
   ],
   declarations: [UseClassContainerComponent],
-  providers: []
+  providers: [
+    // { provide: USE_CLASS_TOKEN, useClass: UseClassRootService }
+  ]
 })
 export class UseClassModule { }

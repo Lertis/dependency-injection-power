@@ -9,8 +9,7 @@ import { AppComponent } from './app.component'
 import { AppRouteModule } from './app-routing.module'
 
 import { BoxModule } from './modules/shared'
-import { SixthModule } from './modules/use-class/sixth/sixth.module'
-import { SixthRootService } from './modules/use-class/services/sixth-service'
+import { UseClassRootService } from './modules/use-class/services'
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,11 +17,10 @@ import { SixthRootService } from './modules/use-class/services/sixth-service'
     BrowserModule,
     CommonModule,
     AppRouteModule,
-    BoxModule,
-    SixthModule, // USE CLASS DIRECT
+    BoxModule
   ],
   providers: [
-    { provide: USE_CLASS_TOKEN, useClass: SixthRootService }
+    // { provide: USE_CLASS_TOKEN, useClass: UseClassRootService }
   ],
   bootstrap: [AppComponent]
 })
