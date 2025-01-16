@@ -1,0 +1,11 @@
+<div class="flex-row-space-around">
+  <app-box label="Parent" [value]="''">
+    <ul>
+      <li>{{ 'No decorator' }} - <code>private readonly first: SelfFirstService</code>: {{ noDecorator }}</li>
+      <li>{{ '@Self() decorator' }} - <code>{{ '@Self() private readonly first: SelfFirstService' }}</code>: {{ selfDecorator }}</li>
+      <li>{{ '@SkipSelf() decorator' }} - <code>{{ '@SkipSelf() private readonly first: SelfFirstService' }}</code>: {{ skipSelfDecorator }}</li>
+    </ul>
+  </app-box>
+
+  <!-- <app-props-child></app-props-child> -->
+</div>

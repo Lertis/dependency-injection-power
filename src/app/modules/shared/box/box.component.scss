@@ -1,0 +1,10 @@
+.box {
+  min-height: 150px;
+  height: max-content;
+  width: 250px;
+  background: #dbd8d8;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  margin: 3px;
+}
