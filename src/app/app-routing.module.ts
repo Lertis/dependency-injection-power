@@ -1,8 +1,14 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 import { RoutePath } from '@models'
+import { NotFoundComponent } from './modules/shared/not-found/not-found.component'
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'init',
+    pathMatch: 'full'
+  },
   {
     path: RoutePath.USE_VALUE,
     loadChildren: () => import('./modules/use-value/use-value.module').then(({ UseValueModule }) => UseValueModule)
@@ -22,6 +28,10 @@ const routes: Routes = [
   {
     path: RoutePath.TOKEN_PROPS,
     loadChildren: () => import('./modules/token-props/token-props.module').then(({ TokenPropsModule }) => TokenPropsModule)
+  },
+  {
+    path: "**",
+    loadComponent: () => NotFoundComponent
   }
 ]
 

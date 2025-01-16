@@ -20,14 +20,27 @@ $main-color: #051e48;
   cursor: pointer;
   box-shadow: 0 9px #999;
   transition: all 0.3s ease;
+  &.secondary {
+    background-color: #da4c9a;
+  }
 }
 
-.button:hover {
+.button:not(.secondary):hover {
   background-color: #2b4063;
+}
+
+.button.secondary :hover {
+  background-color: #6e105a;
 }
 
 .button:active {
   background-color: #009aff;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button.secondary:active {
+  background-color: #f89dcf;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }

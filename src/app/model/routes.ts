@@ -1,4 +1,5 @@
 export enum RoutePath {
+  INIT = 'init',
   USE_VALUE = 'use-value',
   USE_CLASS = 'use-class',
   USE_FACTORY = 'use-factory',
