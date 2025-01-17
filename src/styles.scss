@@ -44,3 +44,6 @@ $main-color: #051e48;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
